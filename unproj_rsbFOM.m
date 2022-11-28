@@ -130,7 +130,7 @@ nmv = nmv + k;
 
 %Optionally select a recycling subspace suitable for a differnt shift on
 %the next iteration.
-if shift_recycle_method == 1
+if shift_recycle_method == 1 && size(shifts,2) ~= 1
    shift_monitor = shift_monitor + 1;
    if shift_monitor == size(shifts,2)
        shift_monitor = 1;
